@@ -11,6 +11,14 @@ bot = commands.Bot(command_prefix="!",intents=intents)
 async def on_ready():
     print(f"Conectado como {bot.user}")
 
+
+@bot.command()
+async def Ayuda(ctx):
+    await ctx.send("1: Escribe !Como_evitar_contaminar Para obtener información acerca de esto")
+    await ctx.send("2: Escribe !Recomendaciones Para obtener mas información sobre como cuidar el medioambiente")
+    await ctx.send("3: Escribe !Medidas_para_descontaminar Para obtener recomendaciones para descontaminar")
+
+
 @bot.command()
 async def Como_evitar_contaminar(ctx): 
     await ctx.send("No tirar basura a las calles, mar, inodoro, o contenedores equivocados.")
